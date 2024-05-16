@@ -1,0 +1,38 @@
+<html>
+
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<link rel="stylesheet" href="index.css">
+	<meta charset="UTF-8">
+	<script src="index.js" defer></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dynamic Color Generator</title>
+</head>
+
+<body>
+
+	<header class="header container" id="header">
+
+		<input type="color" id="colorPicker">
+
+		<select id="select">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome-dark</option>
+            <option value="monochrome-light">Monochrome-light</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic-complement</option>
+            <option value="triad">Triad</option>
+            <option value="quad">Quad</option>
+        </select>
+
+		<button id="btn">Get color scheme</button>
+
+	</header>
+
+	<main class="colors-cols-container" id="colorCols">
+
+	</main>
+
+</body>
+
+</html>
