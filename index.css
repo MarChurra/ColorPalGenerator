@@ -62,8 +62,6 @@ button:active {
 .colors-cols-container {
     display: flex;
     height: 80%;
-    min-height: 100px;
-    max-width: 1000px;
     width: 95%;
     justify-content: center;
     margin: 2em auto 0 auto;
@@ -75,12 +73,9 @@ button:active {
 }
 
 .color-cols {
-    height: 100%;
+    height: 70%;
     width: 100%;
-    min-width: 125px;
-    max-width: 250px;
     cursor: pointer;
-    max-height: 550px;
 }
 
 h2 {
