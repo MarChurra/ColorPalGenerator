@@ -63,7 +63,7 @@ button:active {
 .colors-cols-container {
     display: flex;
     height: 80%;
-    width: 100%;
+    width: 95%;
     justify-content: center;
     margin: 3em auto 0 auto;
 }
@@ -154,4 +154,30 @@ h2 {
     top: 50%;
     bottom: 2.5em;
     transform: translateX(-50%) translateY(-50%);
+}
+
+@media (max-width: 750px) {
+
+    h2 {
+        font-size: 0.7rem;
+        margin-right: 1em;
+    }
+
+    select,
+    button {
+        font-size: 0.8rem;
+        padding: 1em;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1em auto;
+        width: 100%;
+        gap: 1em;
+        padding-top: 1em;
+    }
+
 }
