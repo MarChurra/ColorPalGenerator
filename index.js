@@ -38,13 +38,14 @@ document.getElementById('btn').addEventListener('click', function () {
         })
 
         .then(data => {
+            console.log(data)
             let columnHTML = ''
             data.colors.forEach(function (color, index) {
                 columnHTML +=
                     `
                 <div class="col-wrapper" style="animation-delay: ${index * 0.1}s">
-                <img class="color-cols fade-in" src="${color.image.named}">
-                <h2>${color.hex.value}</h2>
+                <img class="color-cols fade-in" src="${color.image.bare}">
+                <h2 style="color: ${color.hex.value}">${color.hex.value}</h2>
                 </div>
                 `
             })
@@ -65,14 +66,25 @@ function copyToClipboard() {
         console.log(column)
         column.addEventListener('click', function () {
             const hexValue = column.nextElementSibling.textContent
-            console.log(hexValue)
+            console.log(hexValue);
             navigator.clipboard.writeText(hexValue)
                 .then(() => {
-                    window.alert('Hex value copied to clipboard')
+                    showNotification()
                 })
                 .catch(err => {
                     console.error('Failed to copy text: ', err)
-                })
-        })
-    })
+                });
+        });
+    });
+}
+
+function showNotification() {
+    const notification = document.getElementById('notification');
+    console.log(notification);
+    notification.textContent = 'Hex Value copied to clipboard!';
+    notification.classList.remove('hidden');
+
+    setTimeout(function () {
+        notification.classList.add('hidden');
+    }, 1000);
 }

@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'boogiela';
-    src: url('/fonts/BOOGIELA.ttf');
-}
-
 *,
 *::before,
 *::after {
@@ -13,7 +8,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'boogiela', sans-serif;
+    font-family: "Montserrat", sans-serif;
     height: 100vh;
     min-height: 100vh;
 }
@@ -37,39 +32,40 @@ select,
 button {
     border-radius: 5px;
     border: 0.1px solid black;
+    font-weight: bold;
 }
 
 input {
     border: transparent;
-    width: 4rem;
+    width: 5em;
     height: 3rem;
 }
 
 select {
-    width: 55%;
+    width: 50%;
     max-width: 500px;
-    padding: 0 0.7em;
-    font-family: 'boogiela', sans-serif;
+    padding: 0 1em;
+    font-family: "Montserrat", sans-serif;
 }
 
 button {
     cursor: pointer;
-    padding: 0 0.6em;
+    padding: 0.5em 1em;
     background-color: #FEFFFD;
-    font-family: 'boogiela', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 button:active {
-    opacity: 70%;
+    opacity: 80%;
     transform: scale(1.05)
 }
 
 .colors-cols-container {
     display: flex;
     height: 80%;
-    width: 95%;
+    width: 100%;
     justify-content: center;
-    margin: 2em auto 0 auto;
+    margin: 3em auto 0 auto;
 }
 
 .col-wrapper {
@@ -85,7 +81,7 @@ button:active {
 
 h2 {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 @keyframes fadeIn {
@@ -103,23 +99,28 @@ h2 {
     animation: fadeIn 0.5s ease-in-out forwards;
 }
 
-.col-wrapper:nth-child(1) .fade-in {
+.col-wrapper:nth-child(1) .fade-in,
+.col-wrapper:nth-child(1) h2.fade-in {
     animation-delay: 0.1s;
 }
 
-.col-wrapper:nth-child(2) .fade-in {
+.col-wrapper:nth-child(2) .fade-in,
+.col-wrapper:nth-child(2) h2.fade-in {
     animation-delay: 0.2s;
 }
 
-.col-wrapper:nth-child(3) .fade-in {
+.col-wrapper:nth-child(3) .fade-in,
+.col-wrapper:nth-child(3) h2.fade-in {
     animation-delay: 0.3s;
 }
 
-.col-wrapper:nth-child(4) .fade-in {
+.col-wrapper:nth-child(4) .fade-in,
+.col-wrapper:nth-child(4) h2.fade-in {
     animation-delay: 0.4s;
 }
 
-.col-wrapper:nth-child(5) .fade-in {
+.col-wrapper:nth-child(5) .fade-in,
+.col-wrapper:nth-child(5) h2.fade-in {
     animation-delay: 0.5s;
 }
 
@@ -127,14 +128,30 @@ h2 {
     transform: scale(1.1);
     z-index: 2;
     border-radius: 5px;
+    margin-bottom: 2em;
 }
 
 .color-cols:active {
     opacity: 70%;
 }
 
-@media (max-width:600px) {
-    .color-cols {
-        height: 40%;
-    }
+.hidden {
+    display: none;
+}
+
+#notification {
+    height: 50px;
+    min-width: 250px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding-top: 1em;
+    font-size: 1rem;
+    position: fixed;
+    z-index: 5;
+    left: 50%;
+    top: 50%;
+    bottom: 2.5em;
+    transform: translateX(-50%) translateY(-50%);
 }

@@ -1,6 +1,13 @@
 <html>
 
-<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="index.css">
 	<meta charset="UTF-8">
 	<script src="/index.js" defer type="module"></script>
@@ -15,23 +22,24 @@
 		<input type="color" id="colorPicker">
 
 		<select id="select">
-            <option value="monochrome">Monochrome</option>
-            <option value="monochrome-dark">Monochrome-dark</option>
-            <option value="monochrome-light">Monochrome-light</option>
-            <option value="analogic">Analogic</option>
-            <option value="complement">Complement</option>
-            <option value="analogic-complement">Analogic-complement</option>
-            <option value="triad">Triad</option>
-            <option value="quad">Quad</option>
-        </select>
+			<option value="monochrome">Monochrome</option>
+			<option value="monochrome-dark">Monochrome-dark</option>
+			<option value="monochrome-light">Monochrome-light</option>
+			<option value="analogic">Analogic</option>
+			<option value="complement">Complement</option>
+			<option value="analogic-complement">Analogic-complement</option>
+			<option value="triad">Triad</option>
+			<option value="quad">Quad</option>
+		</select>
 
 		<button id="btn">Get color scheme</button>
 
 	</header>
 
 	<main class="colors-cols-container" id="colorCols">
-
 	</main>
+	
+	<div id="notification" class="hidden"></div>
 
 </body>
 
