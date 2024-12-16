@@ -1,183 +1,189 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-    height: 100vh;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .container {
-    width: 95%;
-    min-width: 400px;
-    max-width: 900px;
-    margin: 0 auto;
+  width: 95%;
+  min-width: 400px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .header {
-    padding-top: 1em;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 
 input,
 select,
 button {
-    border-radius: 5px;
-    border: 0.1px solid black;
-    font-weight: bold;
+  border-radius: 5px;
+  border: 0.1px solid black;
+  font-weight: bold;
 }
 
 input {
-    border: transparent;
-    width: 5em;
-    height: 3rem;
+  border: transparent;
+  width: 5em;
+  height: 3rem;
 }
 
 select {
-    width: 50%;
-    max-width: 500px;
-    padding: 0 1em;
-    font-family: "Montserrat", sans-serif;
+  width: 50%;
+  max-width: 500px;
+  padding: 0 1em;
+  font-family: "Montserrat", sans-serif;
 }
 
 button {
-    cursor: pointer;
-    padding: 0.5em 1em;
-    background-color: #FEFFFD;
-    font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  background-color: #fefffd;
+  font-family: "Montserrat", sans-serif;
 }
 
 button:active {
-    opacity: 80%;
-    transform: scale(1.05)
+  opacity: 80%;
+  transform: scale(1.05);
 }
 
 .colors-cols-container {
-    display: flex;
-    height: 80%;
-    width: 95%;
-    justify-content: center;
-    margin: 3em auto 0 auto;
+  display: flex;
+  height: 80%;
+  width: 95%;
+  justify-content: center;
+  margin: 3em auto 0 auto;
 }
 
 .col-wrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .color-cols {
-    height: 80%;
-    width: 100%;
-    cursor: pointer;
+  height: 80%;
+  width: 100%;
+  cursor: pointer;
 }
 
 h2 {
-    text-align: center;
-    font-size: 1rem;
+  text-align: center;
+  font-size: 1rem;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 .fade-in {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in-out forwards;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 .col-wrapper:nth-child(1) .fade-in,
 .col-wrapper:nth-child(1) h2.fade-in {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .col-wrapper:nth-child(2) .fade-in,
 .col-wrapper:nth-child(2) h2.fade-in {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .col-wrapper:nth-child(3) .fade-in,
 .col-wrapper:nth-child(3) h2.fade-in {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .col-wrapper:nth-child(4) .fade-in,
 .col-wrapper:nth-child(4) h2.fade-in {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .col-wrapper:nth-child(5) .fade-in,
 .col-wrapper:nth-child(5) h2.fade-in {
-    animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .color-cols:hover {
-    transform: scale(1.1);
-    z-index: 2;
-    border-radius: 5px;
-    margin-bottom: 2em;
+  transform: scale(1.025);
+  z-index: 2;
+  border-radius: 5px;
+  margin-bottom: 0.5em;
 }
 
 .color-cols:active {
-    opacity: 70%;
+  opacity: 70%;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 #notification {
-    height: 50px;
-    min-width: 250px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding-top: 1em;
-    font-size: 1rem;
-    position: fixed;
-    z-index: 5;
-    left: 50%;
-    top: 50%;
-    bottom: 2.5em;
-    transform: translateX(-50%) translateY(-50%);
+  line-height: 1.5;
+  height: auto;
+  border-radius: 5px;
+  padding: 1em 1.5em;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  z-index: 5;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 1.25rem;
 }
 
 @media (max-width: 750px) {
+  h2 {
+    font-size: 0.7rem;
+    margin-right: 1em;
+  }
 
-    h2 {
-        font-size: 0.7rem;
-        margin-right: 1em;
-    }
+  select,
+  button {
+    font-size: 0.8rem;
+    padding: 1em;
+  }
 
-    select,
-    button {
-        font-size: 0.8rem;
-        padding: 1em;
-    }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+    width: 100%;
+    gap: 1em;
+    padding-top: 1em;
+  }
 
-    header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 1em auto;
-        width: 100%;
-        gap: 1em;
-        padding-top: 1em;
-    }
+  #colorPicker {
+    width: 40%;
+  }
 
+  .color-cols {
+    height: 50%;
+  }
 }
